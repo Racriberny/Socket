@@ -10,8 +10,14 @@ import java.net.Socket;
 public class LaminaMarcoCliente extends JPanel {
 
     public LaminaMarcoCliente(){
-        JLabel texto = new JLabel("CLIENTE");
+        nick = new JTextField(5);
+        add(nick);
+        JLabel texto = new JLabel("-CHAT-");
         add(texto);
+        ip = new JTextField(8);
+        add(ip);
+        campoChat = new JTextArea(12,20);
+        add(campoChat);
         campo1 = new JTextField(20);
         add(campo1);
         miBoton = new JButton("Enviar");
@@ -19,17 +25,24 @@ public class LaminaMarcoCliente extends JPanel {
         miBoton.addActionListener(miEvento);
         add(miBoton);
     }
-    private JTextField campo1;
+    private JTextField campo1,nick,ip;
     private JButton miBoton;
+    private  JTextArea campoChat;
 
     private class EnviaTexto implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
                 Socket miSockeet = new Socket("192.168.20.103",9999);
+                PaqueteEnviado datos = new PaqueteEnviado();
+                datos.setNick(nick.getText());
+                datos.setIp(ip.getText());
+                datos.setMensaje(campo1.getText());
+
+                /*
                 DataOutputStream flujo_salida = new DataOutputStream(miSockeet.getOutputStream());
                 flujo_salida.writeUTF(campo1.getText());
-                flujo_salida.close();
+                flujo_salida.close();*/
 
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
