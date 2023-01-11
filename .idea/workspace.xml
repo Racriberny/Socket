@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60c2c394-d088-4565-8792-e2a5b2d86ba6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/EnviaTexto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/LaminaMarcoCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/MarcoCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/MarcoServidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/Servidor.java" afterDir="false" />
+    <list default="true" id="60c2c394-d088-4565-8792-e2a5b2d86ba6" name="Changes" comment="Primer video">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/EnviaTexto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/LaminaMarcoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/LaminaMarcoCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/MarcoServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/MarcoServidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Cliente">
+}</component>
+  <component name="RunManager" selected="Application.Servidor">
     <configuration name="Cliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cristobalbernal.Socket.Cliente.Cliente" />
       <module name="Socket.main" />
@@ -103,8 +90,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673450476980</updated>
-      <workItem from="1673450479288" duration="1294000" />
+      <workItem from="1673450479288" duration="1639000" />
+      <workItem from="1673452274427" duration="1463000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer video">
+      <created>1673452012044</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673452012045</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primer video">
+      <created>1673452059041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673452059041</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Primer video">
+      <created>1673452103624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673452103624</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,5 +130,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer video" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer video" />
   </component>
 </project>
