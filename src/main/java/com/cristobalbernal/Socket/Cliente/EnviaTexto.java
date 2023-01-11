@@ -13,6 +13,7 @@ public class EnviaTexto implements ActionListener {
             Socket miSockeet = new Socket("192.168.20.103",9999);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
+            System.out.println();
         }
     }
 }
