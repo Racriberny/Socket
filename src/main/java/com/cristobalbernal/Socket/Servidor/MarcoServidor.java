@@ -1,9 +1,12 @@
 package com.cristobalbernal.Socket.Servidor;
 
+import com.cristobalbernal.Socket.Cliente.PaqueteEnviado;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.DataInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -26,17 +29,30 @@ public class MarcoServidor extends JFrame implements Runnable{
         //System.out.println("Estoy a la escucha");
         try {
             ServerSocket servidor = new ServerSocket(9999);
-
+            String nick,ip,mensaje;
+            PaqueteEnviado paqueteRecibidos;
             while (true){
 
                 Socket miSocket = servidor.accept();
+
+                ObjectInputStream paquete_Datos = new ObjectInputStream(miSocket.getInputStream());
+                paqueteRecibidos = (PaqueteEnviado) paquete_Datos.readObject();
+                nick = paqueteRecibidos.getNick();
+                ip = paqueteRecibidos.getIp();
+                mensaje = paqueteRecibidos.getMensaje();
+                /*
                 DataInputStream flujo_entrada = new DataInputStream(miSocket.getInputStream());
                 String mensaje_texto = flujo_entrada.readUTF();
                 areaTexto.append("\n" + mensaje_texto);
+
+                 */
+                areaTexto.append("\n" + nick + ": " + mensaje + " para " + ip);
                 miSocket.close();
 
             }
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

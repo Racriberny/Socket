@@ -1,6 +1,8 @@
 package com.cristobalbernal.Socket.Cliente;
 
-public class PaqueteEnviado {
+import java.io.Serializable;
+
+public class PaqueteEnviado implements Serializable {
     String nick,ip,mensaje;
 
     public String getNick() {

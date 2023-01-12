@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class LaminaMarcoCliente extends JPanel {
@@ -38,6 +39,9 @@ public class LaminaMarcoCliente extends JPanel {
                 datos.setNick(nick.getText());
                 datos.setIp(ip.getText());
                 datos.setMensaje(campo1.getText());
+                ObjectOutputStream paquete_dato = new ObjectOutputStream(miSockeet.getOutputStream());
+                paquete_dato.writeObject(datos);
+                miSockeet.close();
 
                 /*
                 DataOutputStream flujo_salida = new DataOutputStream(miSockeet.getOutputStream());
