@@ -5,10 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 
-public class LaminaMarcoCliente extends JPanel {
+public class LaminaMarcoCliente extends JPanel implements Runnable {
 
     public LaminaMarcoCliente(){
         nick = new JTextField(5);
@@ -25,10 +27,30 @@ public class LaminaMarcoCliente extends JPanel {
         EnviaTexto miEvento = new EnviaTexto();
         miBoton.addActionListener(miEvento);
         add(miBoton);
+        Thread miHilo = new Thread(this);
+        miHilo.start();
     }
     private JTextField campo1,nick,ip;
     private JButton miBoton;
     private  JTextArea campoChat;
+
+    @Override
+    public void run() {
+        try {
+            ServerSocket servidor_cliente = new ServerSocket(9090);
+            Socket cliente;
+            PaqueteEnviado paqueteRecibido;
+            while (true){
+                cliente = servidor_cliente.accept();
+                ObjectInputStream flujoEntrada = new ObjectInputStream(cliente.getInputStream());
+                paqueteRecibido = (PaqueteEnviado) flujoEntrada.readObject();
+                campoChat.append("\n" + paqueteRecibido.getNick() + ": " + paqueteRecibido.getMensaje());
+            }
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 
     private class EnviaTexto implements ActionListener {
         @Override
