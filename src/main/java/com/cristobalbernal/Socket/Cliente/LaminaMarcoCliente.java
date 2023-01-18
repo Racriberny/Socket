@@ -55,6 +55,9 @@ public class LaminaMarcoCliente extends JPanel implements Runnable {
     private class EnviaTexto implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            campoChat.append("\n" + campo1.getText());
+
+
             try {
                 Socket miSockeet = new Socket("192.168.20.103",9999);
                 PaqueteEnviado datos = new PaqueteEnviado();
