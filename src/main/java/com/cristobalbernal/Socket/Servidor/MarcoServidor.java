@@ -8,6 +8,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -35,7 +36,11 @@ public class MarcoServidor extends JFrame implements Runnable{
             while (true){
 
                 Socket miSocket = servidor.accept();
-
+                /*DETECTA ONLINE */
+                InetAddress localizacion = miSocket.getInetAddress();
+                String IpRemota = localizacion.getHostAddress();
+                System.out.println("Online " + IpRemota);
+                /*--------------------------------*/
                 ObjectInputStream paquete_Datos = new ObjectInputStream(miSocket.getInputStream());
                 paqueteRecibidos = (PaqueteEnviado) paquete_Datos.readObject();
                 nick = paqueteRecibidos.getNick();

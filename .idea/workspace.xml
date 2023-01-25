@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60c2c394-d088-4565-8792-e2a5b2d86ba6" name="Changes" comment="6 video">
+    <list default="true" id="60c2c394-d088-4565-8792-e2a5b2d86ba6" name="Changes" comment="7 video">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/EnvioOnline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/LaminaMarcoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/LaminaMarcoCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/MarcoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Cliente/MarcoCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/MarcoServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cristobalbernal/Socket/Servidor/MarcoServidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +107,8 @@
       <workItem from="1674052579903" duration="1675000" />
       <workItem from="1674054513055" duration="869000" />
       <workItem from="1674225149233" duration="235000" />
-      <workItem from="1674658532303" duration="616000" />
+      <workItem from="1674658532303" duration="676000" />
+      <workItem from="1674659364837" duration="626000" />
     </task>
     <task id="LOCAL-00001" summary="Primer video">
       <created>1673452012044</created>
@@ -163,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674055370940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="7 video">
+      <created>1674659167360</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674659167360</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +197,7 @@
     <MESSAGE value="4 video" />
     <MESSAGE value="5 video" />
     <MESSAGE value="6 video" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 video" />
+    <MESSAGE value="7 video" />
+    <option name="LAST_COMMIT_MESSAGE" value="7 video" />
   </component>
 </project>
