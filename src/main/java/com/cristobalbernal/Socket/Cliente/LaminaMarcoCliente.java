@@ -13,11 +13,18 @@ import java.net.Socket;
 public class LaminaMarcoCliente extends JPanel implements Runnable {
 
     public LaminaMarcoCliente(){
-        nick = new JTextField(5);
+        String nick_usuario = JOptionPane.showInputDialog("Nick: ");
+        JLabel n_nick = new JLabel("Nick: ");
+        add(n_nick);
+        nick = new JLabel();
+        nick.setText(nick_usuario);
         add(nick);
-        JLabel texto = new JLabel("-CHAT-");
+        JLabel texto = new JLabel("Online: ");
         add(texto);
-        ip = new JTextField(8);
+        ip = new JComboBox();
+        ip.addItem("Usuario 1");
+        ip.addItem("Usuario 2");
+        ip.addItem("Usuario 3");
         add(ip);
         campoChat = new JTextArea(12,20);
         add(campoChat);
@@ -30,7 +37,9 @@ public class LaminaMarcoCliente extends JPanel implements Runnable {
         Thread miHilo = new Thread(this);
         miHilo.start();
     }
-    private JTextField campo1,nick,ip;
+    private JTextField campo1;
+    private JComboBox ip;
+    private JLabel nick;
     private JButton miBoton;
     private  JTextArea campoChat;
 
@@ -62,7 +71,7 @@ public class LaminaMarcoCliente extends JPanel implements Runnable {
                 Socket miSockeet = new Socket("192.168.20.103",9999);
                 PaqueteEnviado datos = new PaqueteEnviado();
                 datos.setNick(nick.getText());
-                datos.setIp(ip.getText());
+                datos.setIp(ip.getSelectedItem().toString());
                 datos.setMensaje(campo1.getText());
                 ObjectOutputStream paquete_dato = new ObjectOutputStream(miSockeet.getOutputStream());
                 paquete_dato.writeObject(datos);
